@@ -41,8 +41,13 @@ public class ProductServiceImpl implements IProductService{
     }
 
     @Override
+    public List<ProductCreateResDTO> findAllProductCreateResDTO() {
+        return productRepository.findAllProductCreateResDTO();
+    }
+
+    @Override
     public Optional<Product> findById(Long id) {
-        return Optional.empty();
+        return productRepository.findById(id);
     }
 
     @Override
